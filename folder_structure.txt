@@ -1,0 +1,32 @@
+Selected folder: D:/reactjs/udemy/01-starting-project
+.gitignore
+index.html
+package-lock.json
+package.json
+[react]
+  manage.py
+  [react]
+    [settings]
+      base.py
+      development.py
+      production.py
+      testing.py
+      __init__.py
+[src]
+  App.jsx
+  [assets]
+    components.png
+    config.png
+    jsx-ui.png
+    react-core-concepts.png
+    state-mgmt.png
+  [components]
+    [assets]
+      [Header]
+        Header.css
+        Header.jsx
+    CoreConcept.jsx
+  data.js
+  index.css
+  index.jsx
+vite.config.js
