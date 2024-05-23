@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Word Blocker",
+  "version": "0.0.1",
+  "description": "For Blocking some specific keywords web app",
+  "author": "me@parth.in",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "actions": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_title": "My Amazing Chrome Extension"
+  } 
+}
