@@ -1,6 +1,6 @@
 chrome.runtime.onInstalled.addListener(() => {
     // Initialize the list of keywords
-    chrome.storage.local.set({ keywords: ["study iq", "tmkoc"] });
+    chrome.storage.local.set({ keywords: ["study iq", "tmkoc", "korean","study glows", "ankit awasthi", "status", "reel", "shorts", "#fun", "Taarak Mehta Ka Ooltah Chashmah", "News"] });
   });
   
   chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
