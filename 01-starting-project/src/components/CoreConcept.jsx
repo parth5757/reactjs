@@ -7,4 +7,4 @@ export default function CoreConcept(props) {
         <p>{props.description}</p>
     </li>
     );
-}
+} 
