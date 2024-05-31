@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter, Router, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
+import './App.css';
 import './App.css'
 const App = () => {
   const activeMenu =  false;
@@ -34,7 +35,7 @@ const App = () => {
             </div>
           </div>
           <div>
-            <Routes>
+          <Routes>
               {/* Dashboard */}
               <Route path="/" element="ECommerce" />
               <Route path="/ecommerce" element="ECommerce" />
