@@ -1,22 +1,24 @@
 chrome.runtime.onInstalled.addListener(() => {
-    // Initialize the list of keywords
-    chrome.storage.local.set({ keywords: ["study iq", "tmkoc", "korean","study glows", "ankit awasthi", "status", "reel", "shorts", "fun", "Taarak Mehta Ka Ooltah Chashmah", "affairs", "drama"] });
-  });
+  chrome.storage.local.set({ keywords: ["study iq", "tmkoc", "minitv", "mx player", "south movie", "korean","study glows", "ankit awasthi", "status", "reels", "shorts", "fun", "Sony Sab", "affairs", "drama", "food Vlog", "street food", "Jio Cinema"] });
+});
 
-  
-  // this is old one it work when the tab reloaded 
-  chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.status === 'complete' && tab.title) {
-      chrome.storage.local.get("keywords", (data) => {
-        let keywords = data.keywords || [];
-        for (let keyword of keywords) {
-          if (tab.title.toLowerCase().includes(keyword.toLowerCase())) {
-            chrome.tabs.remove(tabId);
-            break;
-          }
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.type === 'checkTitle') {
+    chrome.storage.local.get("keywords", (data) => {
+      let keywords = data.keywords || [];
+      for (let keyword of keywords) {
+        if (message.title.toLowerCase().includes(keyword.toLowerCase())) {
+          chrome.tabs.remove(sender.tab.id, () => {
+            chrome.notifications.create({
+              type: 'basic',
+              iconUrl: 'icon.png',
+              title: 'Tab Closed',
+              message: `Closed tab because it contained the keyword: "${keyword}".`
+            });
+          });
+          break;
         }
-      });
-    }
-  });
-
-// this is new version where that tab is always been checking 
+      }
+    });
+  }
+});

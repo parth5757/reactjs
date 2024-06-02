@@ -2,11 +2,12 @@
   "manifest_version": 3,
   "name": "Word Blocker",
   "version": "0.0.1",
-  "description": "Automatically closes tabs with specified keywords in the title.",
+  "description": "Automatically closes tabs with specified keywords in the title and notifies the user.",
   "author": "me@parth.in",
   "permissions": [
     "tabs",
-    "storage"
+    "storage",
+    "notifications"
   ],
   "background": {
     "service_worker": "background.js"
@@ -27,10 +28,9 @@
   },
   "content_scripts": [
     {
-      "matches":["<all_urls>"],
-      "js":["content.js"],
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
       "run_at": "document_idle"
     }
   ]
 }
-  
