@@ -1,5 +1,5 @@
 chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.local.set({ keywords: ["study iq", "tmkoc", "minitv", "mx player", "south movie", "korean","study glows", "ankit awasthi", "status", "reels", "shorts", "fun", "Sony Sab", "affairs", "drama", "food Vlog", "street food", "Jio Cinema"] });
+  chrome.storage.local.set({ keywords: ["study iq", "tmkoc", "minitv", "mx player", "south movie", "korean","study glows", "ankit awasthi", "status", "reels", "shorts", "Sony Sab", "affairs", "drama", "food Vlog", "street food", "Jio Cinema", "Cricket", "Pahul Walia", "rj raunac", "tanay", "Dhruv Rathee", "swagger sharma", "web series", "movie"] });
 });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
