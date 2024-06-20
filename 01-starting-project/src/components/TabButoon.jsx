@@ -15,11 +15,11 @@
 //     )
 // } //one methods with use with just props
 
-export default function TabButton({ children, onSelect } ) {
+export default function TabButton({ children,   onSelect, isSelected } ) {  //this 3 parameter of TabButton are the props
     console.log('TABBUTTON COMPONENT EXECUTING')
     return (
         <li>
-            <button onClick={onSelect}>{children}</button>
+            <button className={isSelected ? 'active' : undefined} onClick={onSelect}>{children}</button>
         </li>
     )
 } 

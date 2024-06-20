@@ -48,6 +48,21 @@ main h2 {
  animation: myAnim 2s; /* Apply the animation here */
 }
 
+.tab-content {
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: #370e64;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: myAnim 2s; /* Apply the animation here */
+ }
+
 @keyframes myAnim {
   0% {
     animation-timing-function: ease-in;
