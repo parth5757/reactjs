@@ -1,0 +1,260 @@
+/* Header.css */
+
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Discount banner styles */
+.discount-banner {
+    background-color: #ffcc00;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discount-banner p {
+    margin: 0;
+    flex: 1;
+}
+
+.discount-banner button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.discount-banner img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Navigation styles */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 12vh;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-logo img {
+    max-width: 150px;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Icons styles */
+.icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-icon {
+    margin-left: 15px;
+}
+
+.nav-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.nav-icon img:hover {
+    transform: scale(1.6);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .nav {
+        padding: 10px;
+    }
+
+    .nav-logo img {
+        max-width: 130px;
+    }
+
+    .nav-links li {
+        margin: 0 10px;
+    }
+
+    .nav-icon img {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        padding: 10px;
+    }
+
+    .nav-logo img {
+        max-width: 120px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-toggle img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .icon .nav-icon.like-icon,
+    .icon .nav-icon.profile-icon {
+        display: none;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 5px;
+    }
+
+    .nav {
+        padding: 5px;
+    }
+
+    .nav-logo img {
+        max-width: 100px;
+    }
+
+    .nav-icon img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .discount-banner p {
+        font-size: 14px;
+    }
+
+    .discount-banner img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Side menu styles */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #202d5a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu.open {
+    width: 250px; /* Adjust width as needed */
+}
+
+.side-menu .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu li {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu li:hover {
+    color: #f1f1f1;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar-icons {
+    padding: 20px;
+}
+
+.sidebar-icon {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.sidebar-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.sidebar-icon img:hover {
+    transform: scale(1.2);
+}
