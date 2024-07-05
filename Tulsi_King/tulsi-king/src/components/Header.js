@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Header.css'; // Import your CSS file for styling
-import cart from '../data/img/basket.svg';
+import cart from '../data/img/cart.gif';
 import user from '../data/img/user.svg';
 import like from '../data/img/like.svg';
 import menu from '../data/img/menu.gif';
@@ -65,8 +65,8 @@ const Header = () => {
                     <li className="side-link"><a href="contact.html">Contact</a></li>
                 </ul>
                 <div className="sidebar-icons">
-                    <div className="sidebar-icon"><a href="save.html"><img src="assets/img/like.svg" alt="Save Product" /></a></div>
-                    <div className="sidebar-icon"><a href="profile.html"><img src="assets/img/user.svg" alt="User" /></a></div>
+                    <div className="sidebar-icon"><a href="save.html"><img src={like} alt="Save Product" /></a></div>
+                    <div className="sidebar-icon"><a href="profile.html"><img src={user} alt="User" /></a></div>
                 </div>
             </div>
         </header>

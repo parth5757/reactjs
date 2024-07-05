@@ -87,6 +87,8 @@ header {
 
 .nav-icon {
     margin-left: 15px;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 .nav-icon img {
@@ -241,7 +243,9 @@ header {
 }
 
 .sidebar-icons {
+    align-items: end;
     padding: 20px;
+    display: flex;
 }
 
 .sidebar-icon {
