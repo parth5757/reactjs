@@ -30,7 +30,9 @@ function App() {
         <h2>Core Concepts</h2>
         <ul>
           {/* <CoreConcept title="Components" description="The Core UI building block" img={componentImg} /> props example */}
-          <CoreConcept 
+
+          {/* This one of thing we can use how many number of array size we know */}
+          {/* <CoreConcept 
                     title={CORE_CONCEPTS[0].title} 
                     description={CORE_CONCEPTS[0].description} 
                     img={CORE_CONCEPTS[0].image} 
@@ -45,11 +47,15 @@ function App() {
                     description={CORE_CONCEPTS[2].description} 
                     img={CORE_CONCEPTS[2].image} 
           />
-          <CoreConcept 
-                    title={CORE_CONCEPTS[3].title} 
-                    description={CORE_CONCEPTS[3].description} 
-                    img={CORE_CONCEPTS[3].image} 
-          />
+          <CoreConcept {...CORE_CONCEPTS[3]}/> */}
+
+          {/* this another method to display the data let suppose  we don't know what is size of data how many time the data is comming so at thay time we are using the Array */}
+
+
+          {CORE_CONCEPTS.map((conceptItem) => (
+            <CoreConcept key={conceptItem.title} {...conceptItem} />
+          ))}
+
         </ul> 
         </section>
         <section id="examples">
@@ -90,4 +96,4 @@ function App() {
   );
 }
 
-export default App;  
+export default App;   
