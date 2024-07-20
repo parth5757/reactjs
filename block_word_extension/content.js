@@ -1,6 +1,15 @@
 if (window.location.href.includes("https://www.linkedin.com/feed/")) {
   window.location.href = "https://www.linkedin.com/jobs/";
 }
+if (window.location.href.includes("https://www.instagram.com/reels/")) {
+  window.location.href = "https://www.instagram.com";
+}
+if (window.location.href.includes("https://www.instagram.com/explore/")) {
+  window.location.href = "https://www.instagram.com";
+}
+if (window.location.href.includes("https://www.youtube.com/shorts/")) {
+  window.location.href = "https://www.youtube.com";
+}
 // else if (window.location.href.includes("https://www.udemy.com/course/react-the-complete-guide-incl-redux/")) {
 //   alert("executing")
 //   $(document).ready(function() {
