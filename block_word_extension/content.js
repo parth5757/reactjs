@@ -12,22 +12,28 @@ if (window.location.href.includes("https://www.instagram.com/explore/")) {
 if (window.location.href.includes("https://www.youtube.com/shorts/")) {
   window.location.href = "https://www.youtube.com";
 }
-if (window.location.href.includes("https://www.bing.com/search?q=")) {
-
-  // Wait for the DOM to be fully loaded
+if (window.location.href.includes("https://www.bing.com")) {
+  // Wait for the DOM to fully load first
   window.onload = function() {
-    // Select all anchor tags on the page
-    const anchorTags = document.querySelectorAll('a');
-    
-    // Log the anchor tags to see if they are selected properly
-
-    // Loop through each anchor tag and remove the target attribute
-    anchorTags.forEach(anchor => {
-      anchor.removeAttribute('target');
-    });
+    setTimeout(function() {
+      const anchorTags = document.querySelectorAll('a');
+      // console.log(anchorTags);
+      // check is there any anchortag or not 
+      if(anchorTags.length>0){
+        // Loop through each anchor tag and remove the target attribute
+        anchorTags.forEach(anchor => {
+          anchor.removeAttribute('target');
+        });
+        //Trigger alert when all anchor tag are processed
+        alert("All done good to go.")
+      }
+    }, 5000);
   };
 }
 
+if (window.location.href.includes("https://www.instagram.com/explore/")) {
+  
+}
 
 function checkTitle() {
     const title = document.title;
