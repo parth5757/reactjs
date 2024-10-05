@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { EXAMPLES } from "../../data.js";
 import TabButton from "../TabButoon.jsx";
-
+import Section from "../Sections.jsx";
 export default function Examples() {
     // Always with an state the it declare with the array structure value where first selectedTopic is showing number of count time & set selected is an function
     const [ selectedTopic, setSelectedTopic ] = useState( ); 
@@ -17,8 +17,7 @@ export default function Examples() {
     console.log(selectedTopic)
     }
     return(
-        <section id="examples">
-        <h2>Examples</h2>
+        <Section title="Examples" id="examples">
         <menu>
           <TabButton 
             isSelected={selectedTopic === 'Components'} 
@@ -49,6 +48,6 @@ export default function Examples() {
                 </pre>
                 </div>
             ) }
-      </section>
+      </Section>
     )
 }
