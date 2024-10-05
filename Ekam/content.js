@@ -25,7 +25,7 @@ if (window.location.href.includes("https://www.bing.com")) {
           anchor.removeAttribute('target');
         });
         //Trigger alert when all anchor tag are processed
-        alert("All done good to go.")
+        console.log("All done good to go.")
       }
     }, 5000);
   };

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Word Blocker",
+  "name": "Ekam",
   "version": "0.0.1",
-  "description": "Automatically closes tabs with specified keywords in the title and notifies the user.",
+  "description": "All in one.",
   "author": "me@parth.in",
   "permissions": [
     "tabs",
@@ -13,13 +13,13 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "index.html",
     "default_icon": {
       "16": "icon.png",
       "48": "icon.png",
       "128": "icon.png"
     },
-    "default_title": "Word Blocker"
+    "default_title": "Ekam"
   },
   "icons": {
     "16": "icon.png",
